@@ -1,9 +1,10 @@
 const express = require('express')
 const { default: createClient } = require('@trustshare/api');
+const { env } = require("../env");
 const app = express()
 const port = 4000
 
-const trustshare = createClient('');
+const trustshare = createClient(env.secretKey);
 
 app.get('/get-verification', async (req, res) => {
   console.log("-----------------------------")

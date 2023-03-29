@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import createSDK from '@trustshare/sdk';
 import './App.css';
+import { env } from "../env"
 
-const trustshare = createSDK('');
+const trustshare = createSDK(env.publicKey);
 
 function App() {
   const startVerification = async () => {
