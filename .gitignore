@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# env
+# /server/env.js.dist
+/server/env.js
+# /src/env.js.dist
+/src/env.js
