@@ -1,6 +1,6 @@
 const express = require('express')
 const { default: createClient } = require('@trustshare/api');
-const { env } = require("../env");
+const { env } = require("./env");
 const app = express()
 const port = 4000
 

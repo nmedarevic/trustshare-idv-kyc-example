@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import createSDK from '@trustshare/sdk';
 import './App.css';
-import { env } from "../env"
+import { env } from "./env"
 
 const trustshare = createSDK(env.publicKey);
 
