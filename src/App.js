@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import createSDK from '@trustshare/sdk';
 import './App.css';
 
-const trustshare = createSDK('sandbox_pk_tYZwAQu221iERYfM0jrCryAGIbNfG7U0');
+const trustshare = createSDK('');
 
 function App() {
   const startVerification = async () => {

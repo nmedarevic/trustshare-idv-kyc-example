@@ -3,7 +3,7 @@ const { default: createClient } = require('@trustshare/api');
 const app = express()
 const port = 4000
 
-const trustshare = createClient('sandbox_api_a1lVBwqwYFpdxQMrngeKC113dKxh4whnLeGT37GfdaV4629O6UfVn9OEk0PEZKwt');
+const trustshare = createClient('');
 
 app.get('/get-verification', async (req, res) => {
   console.log("-----------------------------")
