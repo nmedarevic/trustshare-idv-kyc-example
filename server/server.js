@@ -6,7 +6,7 @@ const port = 4000
 
 const trustshare = createClient(env.secretKey);
 
-app.get('/get-verification', async (req, res) => {
+app.get('/start-verification', async (req, res) => {
   console.log("-----------------------------")
   const participant = await trustshare.api.v1.createParticipant({
     email: `emailparticipant+${Math.random()}@email.com`
@@ -26,6 +26,19 @@ app.get('/get-verification', async (req, res) => {
     participantSecret: result.api.v1.createVerification.client_secret,
     participantId: result.api.v1.createVerification.participant.id
   })
+  console.log("-----------------------------\n\n")
+})
+
+
+app.get('/get-verification/:id', async (req, res) => {
+  console.log("-----------------------------")
+
+  const result = await trustshare.api.v1.getVerification({
+    id: req.params.id
+  });
+
+  console.log(result.api.v1)
+  res.set('Access-Control-Allow-Origin', req.get('origin')).send(result.api.v1.getVerification);
   console.log("-----------------------------\n\n")
 })
 

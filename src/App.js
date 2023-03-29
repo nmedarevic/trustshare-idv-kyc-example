@@ -9,7 +9,7 @@ function App() {
   const startVerification = async () => {
 
     console.log("Fetches client secret from the server...");
-    const data = await fetch("http://localhost:4000/get-verification", { method: "GET", mode: 'cors' }).then((resp) => resp.json());
+    const data = await fetch("http://localhost:4000/start-verification", { method: "GET", mode: 'cors' }).then((resp) => resp.json());
     console.log("Client secret successfully fetched", data);
     console.log("Initialising the client SDK...");
     trustshare.sdk.v1.confirmVerification(data.participantSecret).then((result) => console.log(result));
